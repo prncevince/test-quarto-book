@@ -1,0 +1,36 @@
+project:
+  type: book
+  output-dir: docs
+  execute-dir: project
+  post-render:
+    - touch docs/.nojekyll
+book: 
+  title: Test Book
+  author: Vincent Clemson
+  repo-url: https://github.com/prncevince/test-quarto-book
+  reader-mode: true
+  repo-actions: [edit]
+  downloads: [pdf]
+  chapters: 
+    - index.qmd
+    - book/one.qmd
+    - book/two.qmd
+format: 
+  html:
+    code-fold: true
+    code-link: true
+    code-tools:
+      source: repo
+    css: resources/style.css
+    grid:
+      body-width: 1100px
+      sidebar-width: 300px
+      margin-width: 300px
+      gutter-width: 1.5rem
+    toc: true
+    toc-depth: 6
+  pdf:
+    execute:
+      echo: false
+    toc-depth: 6
+

@@ -1,0 +1,22 @@
+# The Second
+
+```{r}
+#| label: setup
+library(knitr)
+options(dplyr.summarise.inform = FALSE)
+```
+
+@sec-two-one & @sec-two-two
+
+@sec-one-one & @sec-one-two
+
+## H2
+
+### One {#sec-two-one}
+
+![Elephant](../resources/elephant.png){#fig-elephant-2}
+
+### Two {#sec-two-two}
+
+See @fig-elephant-1 for the same illustration as @fig-elephant-2
+

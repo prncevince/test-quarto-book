@@ -1,0 +1,52 @@
+# Introduction {.unnumbered}
+
+```{r}
+#| label: packages
+library(gt)
+library(knitr)
+library(kableExtra)
+```
+
+
+```{r}
+#| echo: false
+#| label: tbl-gt
+#| tbl-cap: "Caption GT"
+iris |> gt()
+```
+
+@tbl-gt
+
+```{r}
+#| echo: false
+#| label: tbl-kable-long
+#| tbl-cap: "Caption Long Kable"
+if (is_latex_output()) {
+  kable(iris, booktabs = T, longtable = T) |>
+    kable_styling(font_size = 8, latex_options = c("striped", "repeat_header"))
+} else {
+  kable(iris)
+}
+```
+
+@tbl-kable-long
+
+## Level 2
+
+![Konoha Village](resources/Konohavillage.jpg)
+
+### Level 3
+
+![Konoha Village](resources/elephant.png)
+
+#### Level 4
+
+![Konoha Village](resources/Konohavillage.jpg)
+
+##### Level 5
+
+![Konoha Village](resources/elephant.png)
+
+###### Level 6
+
+![Konoha Village](resources/Konohavillage.jpg)

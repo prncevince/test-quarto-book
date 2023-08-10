@@ -1,0 +1,27 @@
+# The First
+
+```{r setup, echo=FALSE}
+library(knitr)
+knit_hooks$set(pngquant = hook_pngquant)
+opts_chunk$set(pngquant = '')
+options(dplyr.summarise.inform = FALSE)
+```
+
+## H2
+
+@sec-one-one & @sec-one-two 
+
+@sec-two-one & @sec-two-two
+
+In [Custom Section-Thing @sec-one-one] we have the same stuff as [Normal HREF H3-1](#sec-one-one).
+
+In [Custom Section-Thing @sec-two-one] we have the same stuff as [Normal HREF H3-1](#sec-two-one).
+
+### H3-1 {#sec-one-one}
+
+![Elephant](../resources/elephant.png){#fig-elephant-1}
+
+### H3-2 {#sec-one-two}
+
+See @fig-elephant-2 for the same illustration as @fig-elephant-1
+
