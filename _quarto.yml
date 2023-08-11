@@ -4,6 +4,8 @@ project:
   execute-dir: project
   post-render:
     - touch docs/.nojekyll
+execute:
+  freeze: auto
 book: 
   title: Test Book
   author: Vincent Clemson
@@ -33,4 +35,6 @@ format:
     execute:
       echo: false
     toc-depth: 6
+    margin-right: 10mm
+    margin-left: 10mm
 

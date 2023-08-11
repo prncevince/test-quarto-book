@@ -1,0 +1,14 @@
+{
+  "hash": "284e664098434472fc5ccac005074353",
+  "result": {
+    "markdown": "# The Second\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(knitr)\noptions(dplyr.summarise.inform = FALSE)\n```\n:::\n\n\n@sec-two-one & @sec-two-two\n\n@sec-one-one & @sec-one-two\n\n## H2\n\n### One {#sec-two-one}\n\n![Elephant](../resources/elephant.png){#fig-elephant-2}\n\n### Two {#sec-two-two}\n\nSee @fig-elephant-1 for the same illustration as @fig-elephant-2\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "hash": "fcee5ec18c53fcc62fd5ee4c806e8929",
+  "result": {
+    "markdown": "# The First\n\n\n\n::: {.cell}\n\n:::\n\n\n\n## H2\n\n@sec-one-one & @sec-one-two \n\n@sec-two-one & @sec-two-two\n\nIn [Custom Section-Thing @sec-one-one] we have the same stuff as [Normal HREF H3-1](#sec-one-one).\n\nIn [Custom Section-Thing @sec-two-one] we have the same stuff as [Normal HREF H3-1](#sec-two-one).\n\n### H3-1 {#sec-one-one}\n\n![Elephant](../resources/elephant.png){#fig-elephant-1}\n\n### H3-2 {#sec-one-two}\n\nSee @fig-elephant-2 for the same illustration as @fig-elephant-1\n\n",
+    "supporting": [
+      "one_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
