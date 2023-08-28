@@ -14,11 +14,18 @@
     "text": "Level 2\n\n\nKonoha Village\n\nLevel 3\n\n\nKonoha Village\n\nLevel 4\n\n\nKonoha Village\n\nLevel 5\n\n\nKonoha Village\n\nLevel 6\n\n\nKonoha Village"
   },
   {
+    "objectID": "book/one.html#equations",
+    "href": "book/one.html#equations",
+    "title": "\n1  The First\n",
+    "section": "\n1.1 Equations",
+    "text": "1.1 Equations\nEquation 1.1 is a general linear equation.\n\\[\nt[s] = 1[s]*A[km^2]+2[s]\n\\tag{1.1}\\]"
+  },
+  {
     "objectID": "book/one.html#h2",
     "href": "book/one.html#h2",
     "title": "\n1  The First\n",
-    "section": "\n1.1 H2",
-    "text": "1.1 H2\nSection 1.1.1 & Section 1.1.2\nSection 2.1.1 & Section 2.1.2\nIn Custom Section-Thing 1.1.1 we have the same stuff as Normal HREF H3-1.\nIn Custom Section-Thing 2.1.1 we have the same stuff as Normal HREF H3-1.\n\n1.1.1 H3-1\n\n\nFigure 1.1: Elephant\n\n\n1.1.2 H3-2\nSee Figure 2.1 for the same illustration as Figure 1.1"
+    "section": "\n1.2 H2",
+    "text": "1.2 H2\nSection 1.2.1 & Section 1.2.2\nSection 2.1.1 & Section 2.1.2\nIn Custom Section-Thing 1.2.1 we have the same stuff as Normal HREF H3-1.\nIn Custom Section-Thing 2.1.1 we have the same stuff as Normal HREF H3-1.\n\n1.2.1 H3-1\n\n\nFigure 1.1: Elephant\n\n\n1.2.2 H3-2\nSee Figure 2.1 for the same illustration as Figure 1.1"
   },
   {
     "objectID": "book/two.html#h2",
