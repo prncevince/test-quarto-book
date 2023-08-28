@@ -1,12 +1,43 @@
 # Introduction {.unnumbered}
 
+{{< include book/_setup.qmd >}}
+
 ```{r}
 #| label: packages
-library(gt)
-library(knitr)
-library(kableExtra)
+suppressPackageStartupMessages({
+  library(gt)
+  library(knitr)
+  library(GGally)
+  library(ggplot2)
+  library(reshape)
+  library(kableExtra)
+})
 ```
 
+## Equations
+
+@eq-time is a general linear equation.
+
+$$
+t[s] = 1[s]*A[km^2]+2[s]
+$$ {#eq-time}
+
+## Plots
+
+```{r}
+#| label: fig-ggpair-screen
+#| fig-cap: A mad decent image with `fig.screen=TRUE`
+#| fig.screen: true
+reshape::tips |> ggpairs()
+```
+
+```{r}
+#| label: fig-ggpair-default
+#| fig-cap: A less decent image with `fig.screen=FALSE`
+reshape::tips |> ggpairs()
+```
+
+## Tables
 
 ```{r}
 #| echo: false

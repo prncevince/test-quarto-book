@@ -89,7 +89,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="resources/style.css">
+}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="resources/style.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -157,7 +157,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul>
-<li>
+<li><a href="#equations" id="toc-equations" class="nav-link" data-scroll-target="#equations">Equations</a></li>
+  <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots">Plots</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
+  <li>
 <a href="#level-2" id="toc-level-2" class="nav-link" data-scroll-target="#level-2">Level 2</a>
   <ul>
 <li>
@@ -205,32 +208,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header><section id="introduction" class="level1 unnumbered"><h1 class="unnumbered">Introduction</h1>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/">gt</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/">kableExtra</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/">gt</a></span><span class="op">)</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggobi.github.io/ggally/">GGally</a></span><span class="op">)</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://had.co.nz/reshape">reshape</a></span><span class="op">)</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/">kableExtra</a></span><span class="op">)</span></span>
+<span><span class="op">}</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<section id="equations" class="level2"><h2 class="anchored" data-anchor-id="equations">Equations</h2>
+<p><a href="#eq-time">Equation&nbsp;<span>1</span></a> is a general linear equation.</p>
+<p><span id="eq-time"><span class="math display">\[
+t[s] = 1[s]*A[km^2]+2[s]
+\tag{1}\]</span></span></p>
+</section><section id="plots" class="level2"><h2 class="anchored" data-anchor-id="plots">Plots</h2>
+<div class="cell" data-fig.screen="true" data-fig.dim="[20.4094,13.1929]">
+<details><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">reshape</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/reshape/man/tips.html">tips</a></span> <span class="op">|&gt;</span> <span class="fu"><a href="https://ggobi.github.io/ggally/reference/ggpairs.html">ggpairs</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-ggpair-screen" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="index_files/figure-html/fig-ggpair-screen-1.png" class="img-fluid figure-img" width="3456"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: A mad decent image with <code>fig.screen=TRUE</code></figcaption></figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">reshape</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/reshape/man/tips.html">tips</a></span> <span class="op">|&gt;</span> <span class="fu"><a href="https://ggobi.github.io/ggally/reference/ggpairs.html">ggpairs</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-ggpair-default" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="index_files/figure-html/fig-ggpair-default-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: A less decent image with <code>fig.screen=FALSE</code></figcaption></figure>
+</div>
+</div>
+</div>
+</section><section id="tables" class="level2"><h2 class="anchored" data-anchor-id="tables">Tables</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-gt" class="anchored">
 
-<div id="wrscrfbqlo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wrscrfbqlo table {
+<div id="zoureqhsbm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zoureqhsbm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wrscrfbqlo thead, #wrscrfbqlo tbody, #wrscrfbqlo tfoot, #wrscrfbqlo tr, #wrscrfbqlo td, #wrscrfbqlo th {
+#zoureqhsbm thead, #zoureqhsbm tbody, #zoureqhsbm tfoot, #zoureqhsbm tr, #zoureqhsbm td, #zoureqhsbm th {
   border-style: none;
 }
 
-#wrscrfbqlo p {
+#zoureqhsbm p {
   margin: 0;
   padding: 0;
 }
 
-#wrscrfbqlo .gt_table {
+#zoureqhsbm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -256,12 +317,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_caption {
+#zoureqhsbm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wrscrfbqlo .gt_title {
+#zoureqhsbm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -273,7 +334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#wrscrfbqlo .gt_subtitle {
+#zoureqhsbm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -285,7 +346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#wrscrfbqlo .gt_heading {
+#zoureqhsbm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -297,13 +358,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_bottom_border {
+#zoureqhsbm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_col_headings {
+#zoureqhsbm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -318,7 +379,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_col_heading {
+#zoureqhsbm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -338,7 +399,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#wrscrfbqlo .gt_column_spanner_outer {
+#zoureqhsbm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -350,15 +411,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#wrscrfbqlo .gt_column_spanner_outer:first-child {
+#zoureqhsbm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wrscrfbqlo .gt_column_spanner_outer:last-child {
+#zoureqhsbm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wrscrfbqlo .gt_column_spanner {
+#zoureqhsbm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -370,11 +431,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#wrscrfbqlo .gt_spanner_row {
+#zoureqhsbm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wrscrfbqlo .gt_group_heading {
+#zoureqhsbm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -400,7 +461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#wrscrfbqlo .gt_empty_group_heading {
+#zoureqhsbm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -415,15 +476,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#wrscrfbqlo .gt_from_md > :first-child {
+#zoureqhsbm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wrscrfbqlo .gt_from_md > :last-child {
+#zoureqhsbm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wrscrfbqlo .gt_row {
+#zoureqhsbm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -442,7 +503,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#wrscrfbqlo .gt_stub {
+#zoureqhsbm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -455,7 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wrscrfbqlo .gt_stub_row_group {
+#zoureqhsbm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -469,15 +530,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#wrscrfbqlo .gt_row_group_first td {
+#zoureqhsbm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wrscrfbqlo .gt_row_group_first th {
+#zoureqhsbm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wrscrfbqlo .gt_summary_row {
+#zoureqhsbm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -487,16 +548,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wrscrfbqlo .gt_first_summary_row {
+#zoureqhsbm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_first_summary_row.thick {
+#zoureqhsbm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wrscrfbqlo .gt_last_summary_row {
+#zoureqhsbm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -506,7 +567,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_grand_summary_row {
+#zoureqhsbm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -516,7 +577,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wrscrfbqlo .gt_first_grand_summary_row {
+#zoureqhsbm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -526,7 +587,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_last_grand_summary_row_top {
+#zoureqhsbm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -536,11 +597,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_striped {
+#zoureqhsbm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wrscrfbqlo .gt_table_body {
+#zoureqhsbm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -549,7 +610,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_footnotes {
+#zoureqhsbm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -563,7 +624,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_footnote {
+#zoureqhsbm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -572,7 +633,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wrscrfbqlo .gt_sourcenotes {
+#zoureqhsbm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -586,7 +647,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wrscrfbqlo .gt_sourcenote {
+#zoureqhsbm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -594,63 +655,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wrscrfbqlo .gt_left {
+#zoureqhsbm .gt_left {
   text-align: left;
 }
 
-#wrscrfbqlo .gt_center {
+#zoureqhsbm .gt_center {
   text-align: center;
 }
 
-#wrscrfbqlo .gt_right {
+#zoureqhsbm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wrscrfbqlo .gt_font_normal {
+#zoureqhsbm .gt_font_normal {
   font-weight: normal;
 }
 
-#wrscrfbqlo .gt_font_bold {
+#zoureqhsbm .gt_font_bold {
   font-weight: bold;
 }
 
-#wrscrfbqlo .gt_font_italic {
+#zoureqhsbm .gt_font_italic {
   font-style: italic;
 }
 
-#wrscrfbqlo .gt_super {
+#zoureqhsbm .gt_super {
   font-size: 65%;
 }
 
-#wrscrfbqlo .gt_footnote_marks {
+#zoureqhsbm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wrscrfbqlo .gt_asterisk {
+#zoureqhsbm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wrscrfbqlo .gt_indent_1 {
+#zoureqhsbm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wrscrfbqlo .gt_indent_2 {
+#zoureqhsbm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wrscrfbqlo .gt_indent_3 {
+#zoureqhsbm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wrscrfbqlo .gt_indent_4 {
+#zoureqhsbm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wrscrfbqlo .gt_indent_5 {
+#zoureqhsbm .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2792,7 +2853,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><a href="#tbl-kable-long">Table&nbsp;<span>2</span></a></p>
-<section id="level-2" class="level2"><h2 class="anchored" data-anchor-id="level-2">Level 2</h2>
+</section><section id="level-2" class="level2"><h2 class="anchored" data-anchor-id="level-2">Level 2</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="resources/Konohavillage.jpg" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Konoha Village</figcaption></figure>

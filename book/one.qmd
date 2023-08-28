@@ -7,15 +7,6 @@ opts_chunk$set(pngquant = '')
 options(dplyr.summarise.inform = FALSE)
 ```
 
-
-## Equations
-
-@eq-time is a general linear equation.
-
-$$
-t[s] = 1[s]*A[km^2]+2[s]
-$$ {#eq-time}
-
 ## H2
 
 @sec-one-one & @sec-one-two 
