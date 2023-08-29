@@ -10,7 +10,7 @@ __pycache__/
 .Ruserdata
 # local R/RStudio project environment variables
 .Renviron.R
-# data directory for API to handle
+# data directory
 /data
 # R Markdown
 *.nb.html

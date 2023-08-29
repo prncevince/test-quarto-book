@@ -11,6 +11,7 @@ suppressPackageStartupMessages({
   library(ggplot2)
   library(reshape)
   library(kableExtra)
+  library(equatiomatic)
 })
 ```
 
@@ -21,6 +22,42 @@ suppressPackageStartupMessages({
 $$
 t[s] = 1[s]*A[km^2]+2[s]
 $$ {#eq-time}
+
+
+```{r}
+mod1 <- lm(mpg ~ cyl + disp, mtcars)
+```
+
+We can use the [`{equatiomatic}`](https://datalorax.github.io/equatiomatic) package within quarto. 
+
+However, below actually fails being parsed by quarto.
+
+```{r}
+#| results: asis
+#| eval: false
+extract_eq(mod1)
+```
+
+However, if we `print`, rendering succeeds.
+
+```{r}
+#| results: asis
+print(extract_eq(mod1))
+```
+
+@eq-mtcars & @eq-mtcars-coef are equations. Note, the `label: eq-mtcars` does nothing. The pasted `{#eq-*}` does the trick.
+
+```{r}
+#| results: asis
+#| label: eq-mtcars
+cat(paste0("$$\n", extract_eq(mod1), "\n$$", " {#eq-mtcars}"))
+```
+
+```{r}
+#| results: asis
+#| label: eq-mtcars-coef
+cat(paste0("$$\n", extract_eq(mod1, use_coefs = T), "\n$$", " {#eq-mtcars-coef}"))
+```
 
 ## Plots
 
