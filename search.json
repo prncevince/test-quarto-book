@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Test Book",
     "section": "",
-    "text": "Introduction\nCodesuppressPackageStartupMessages({\n  library(gt)\n  library(knitr)\n  library(GGally)\n  library(ggplot2)\n  library(reshape)\n  library(kableExtra)\n})"
+    "text": "Introduction\nCodesuppressPackageStartupMessages({\n  library(gt)\n  library(knitr)\n  library(GGally)\n  library(ggplot2)\n  library(reshape)\n  library(kableExtra)\n  library(equatiomatic)\n})"
   },
   {
     "objectID": "index.html#equations",
     "href": "index.html#equations",
     "title": "Test Book",
     "section": "Equations",
-    "text": "Equations\nEquation 1 is a general linear equation.\n\\[\nt[s] = 1[s]*A[km^2]+2[s]\n\\tag{1}\\]"
+    "text": "Equations\nEquation 1 is a general linear equation.\n\\[\nt[s] = 1[s]*A[km^2]+2[s]\n\\tag{1}\\]\n\nCodemod1 &lt;- lm(mpg ~ cyl + disp, mtcars)\n\n\nWe can use the {equatiomatic} package within quarto.\nHowever, below actually fails being parsed by quarto.\nCodeextract_eq(mod1)\nHowever, if we print, rendering succeeds.\nCodeprint(extract_eq(mod1))\n\\[\n\\operatorname{mpg} = \\alpha + \\beta_{1}(\\operatorname{cyl}) + \\beta_{2}(\\operatorname{disp}) + \\epsilon\n\\]\nEquation 2 & Equation 3 are equations. Note, the label: eq-mtcars does nothing. The pasted {#eq-*} does the trick.\nCodecat(paste0(\"$$\\n\", extract_eq(mod1), \"\\n$$\", \" {#eq-mtcars}\"))\n\\[\n\\operatorname{mpg} = \\alpha + \\beta_{1}(\\operatorname{cyl}) + \\beta_{2}(\\operatorname{disp}) + \\epsilon\n\\tag{2}\\]\nCodecat(paste0(\"$$\\n\", extract_eq(mod1, use_coefs = T), \"\\n$$\", \" {#eq-mtcars-coef}\"))\n\\[\n\\operatorname{\\widehat{mpg}} = 34.66 - 1.59(\\operatorname{cyl}) - 0.02(\\operatorname{disp})\n\\tag{3}\\]"
   },
   {
     "objectID": "index.html#plots",
