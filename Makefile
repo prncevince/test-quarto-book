@@ -2,6 +2,9 @@
 
 docs:
 	quarto render
-	
+
+docs-dev:
+	quarto preview
+
 docs-preview:
 	Rscript -e "servr::httw(dir = 'docs')"

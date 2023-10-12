@@ -65,12 +65,16 @@ cat(paste0("$$\n", extract_eq(mod1, use_coefs = T), "\n$$", " {#eq-mtcars-coef}"
 #| label: fig-ggpair-screen
 #| fig-cap: A mad decent image with `fig.screen=TRUE`
 #| fig.screen: true
+#| lightbox:
+#|   group: lb-group
 reshape::tips |> ggpairs()
 ```
 
 ```{r}
 #| label: fig-ggpair-default
 #| fig-cap: A less decent image with `fig.screen=FALSE`
+#| lightbox:
+#|   group: lb-group
 reshape::tips |> ggpairs()
 ```
 

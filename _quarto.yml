@@ -3,7 +3,7 @@ project:
   output-dir: docs
   execute-dir: project
   post-render:
-    - touch docs/.nojekyll
+    - touch docs/.nojekyll 
 execute:
   freeze: auto
 book: 
@@ -17,6 +17,7 @@ book:
     - index.qmd
     - book/one.qmd
     - book/two.qmd
+    - book/three.ipynb
 format: 
   html:
     code-fold: true
@@ -24,6 +25,10 @@ format:
     code-tools:
       source: repo
     css: resources/style.css
+    filters:
+      - lightbox
+      - quarto
+    lightbox: auto
     grid:
       body-width: 1100px
       sidebar-width: 300px
@@ -37,4 +42,3 @@ format:
     toc-depth: 6
     margin-right: 10mm
     margin-left: 10mm
-

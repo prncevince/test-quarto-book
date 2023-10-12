@@ -19,7 +19,7 @@ In [Custom Section-Thing @sec-two-one] we have the same stuff as [Normal HREF H3
 
 ### H3-1 {#sec-one-one}
 
-![Elephant](../resources/elephant.png){#fig-elephant-1}
+![Elephant](../resources/elephant.png){#fig-elephant-1 description="A pretty elephant"}
 
 ### H3-2 {#sec-one-two}
 
