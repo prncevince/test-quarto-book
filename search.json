@@ -47,5 +47,12 @@
     "title": "\n2  The Second\n",
     "section": "\n2.1 H2",
     "text": "2.1 H2\n\n2.1.1 One\n\n\nFigure 2.1: Elephant\n\n\n2.1.2 Two\nSee Figure 1.1 for the same illustration as Figure 2.1"
+  },
+  {
+    "objectID": "book/three.html#tables",
+    "href": "book/three.html#tables",
+    "title": "3  The Third",
+    "section": "3.1 Tables",
+    "text": "3.1 Tables\n\n\nCode\n# has no effect\npd.options.display.max_colwidth = 80\n\n\n\n\nCode\nimport pandas as pd\nfrom IPython.display import HTML\n\n\n\n\nCode\nd = pd.DataFrame({'x':[1], 'y':[2]})\n# still styled to full width of page b/c boostrap styles .table {width: 100%}\nHTML(d.style()to_html(index=False).)\n\n\n\n\n\nx\ny\n\n\n\n\n1\n2\n\n\n\n\n\n\n\nCode\nprint(d.to_string(index=False))\n\n\n x  y\n 1  2"
   }
 ]
